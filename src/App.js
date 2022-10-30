@@ -9,7 +9,7 @@ function App() {
                 <nav>
                     <ul>
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link to="/">Home/Portada</Link>
                         </li>
                         <li>
                             <Link to="/phaser">Juego Phaser</Link>
