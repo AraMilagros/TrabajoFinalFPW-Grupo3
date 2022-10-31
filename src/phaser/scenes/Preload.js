@@ -13,6 +13,7 @@ export default class Preload extends Phaser.Scene {
         this.load.image('tiles', 'img/phaser/mapa/tileSets.png');
 
         this.load.image('plataformaRoja', 'img/phaser/plataformaRoja.png');
+        this.load.image('trophy', 'img/phaser/trophy.png');
     }
 
     //Una vez que se haya precargado lo necesario
