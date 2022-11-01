@@ -21,11 +21,12 @@ export default class plataformaMovible extends Phaser.GameObjects.Sprite{
         this.plataformasArray.push(this.platformRoja);
         this.platformRoja = this.scenePadre.physics.add.image(902, 400, 'plataformaRoja').setImmovable();
         this.plataformasArray.push(this.platformRoja);
-
+             
         //Una vez creado y agregado al array, se lo recorrera para modificar algunos comportamientos
         // se deshabilitara la gravedad y añadira un collider
         this.plataformasArray.forEach((elem) =>{
             elem.body.allowGravity = false;
+            elem.setSize(0,46); // se ajusto hitbox de plataforma movible
             this.detectedCollision(elem, player);
         })
     }
