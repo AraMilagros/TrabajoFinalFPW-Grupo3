@@ -17,6 +17,9 @@ function App() {
                         <li>
                             <Link to="/react">Juego React</Link>
                         </li>
+                        <li>
+                            <Link to="/react">Desarrolladores</Link>
+                        </li>
                     </ul>
                 </nav>
                 <div>
