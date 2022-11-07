@@ -14,6 +14,7 @@ export default class Preload extends Phaser.Scene {
 
         this.load.image('plataformaRoja', 'img/phaser/plataformaRoja.png');
         this.load.image('trophy', 'img/phaser/trophy.png');
+        this.load.image('bomb', 'img/phaser/bomb.png');
     }
 
     //Una vez que se haya precargado lo necesario
