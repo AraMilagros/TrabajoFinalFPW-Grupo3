@@ -5,6 +5,7 @@ import Player from '../gameObjects/Player';
 import plataformaMovible from "../gameObjects/PlataformaMovible";
 import Config from '../Config';
 import Trophy from '../gameObjects/Trophy';
+import Bomb from "../gameObjects/Bomb";
 
 export default class Principal extends Phaser.Scene {
     mapa = null;
@@ -12,6 +13,7 @@ export default class Principal extends Phaser.Scene {
     solidos = null;   
     camaraPrincipal = null
     trophies = null;
+    bombs = null;
 
     constructor(config) {
         super({ key: 'Principal' });
@@ -43,6 +45,8 @@ export default class Principal extends Phaser.Scene {
         this.platformRoja.create(this.player.returnPlayer());
         //se crea el trofeo para que pueda ser visualizado y se le pasa de parametro el player para añadirle un collider y poder detectar sus colisiones
         this.trophies.create(this.player.returnPlayer());
+        this.bombs = new Bomb(this);
+        this.bombs.create(this.solidos, this.player.returnPlayer());
 
         // this.scoreText = this.add.text(0, 0, 'score: 0', { fontSize: '32px', fill: '#000' });
        
