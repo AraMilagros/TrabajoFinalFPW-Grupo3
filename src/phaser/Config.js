@@ -12,7 +12,7 @@ function Config() {
         var config = {
             type: Phaser.AUTO,
             autoCenter:Phaser.Scale.CENTER_HORIZONTALLY,
-            width: window.innerWidth-90,
+            width: window.innerWidth-416,
             // height: window.innerHeight,
             // width: 900,
             height: 650,
