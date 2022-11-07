@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 import Config from './phaser/Config';
+import JuegoReact from './react/JuegoRect';
 
 function App() {
     return (
@@ -26,7 +27,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="phaser" element={<Config />} />
-                        <Route path="react"/> {/* Aqui iria el juego hecho solo con react */}
+                        <Route path="react" element={<JuegoReact/>}/> {/* Aqui iria el juego hecho solo con react */}
                         <Route path="*" element={<ErrorPage />} />
                     </Routes>
                 </div>
