@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 import Config from './phaser/Config';
-import JuegoReact from './react/JuegoRect';
+import JuegoReact from './react/JuegoReact';
 
 function App() {
     return (
