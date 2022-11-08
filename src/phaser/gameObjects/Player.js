@@ -49,7 +49,7 @@ export default class Player extends Phaser.GameObjects.Sprite{
             this.player.anims.play('turn');
         }
         if (this.cursors.up.isDown && this.player.body.onFloor()) { //con "body.onFloor()" controla que no salte 2 veces
-            this.player.setVelocityY(-430);
+            this.player.setVelocityY(-470);
            // this.checkJump();//Es evitar que pueda saltar en el aire
         }
     }
