@@ -13,22 +13,22 @@ export default class Trophy extends Phaser.GameObjects.Sprite{
     create(player){  //se pasa de parametro el player
         this.trophyArray = new Array(); //este array va a contener los trofeos
          //se crean los trofeos en distintas partes del mapa
-        this.trophies = this.scenePadre.physics.add.image(1300, 2643,'trophy').setImmovable(); 
-        this.trophyArray.push(this.trophies); //para agregar al array anteriormente creado
-        this.trophies = this.scenePadre.physics.add.image(460, 2355,'trophy').setImmovable();
-        this.trophyArray.push(this.trophies)
-        this.trophies = this.scenePadre.physics.add.image(100, 2155,'trophy').setImmovable();
-        this.trophyArray.push(this.trophies)
-        this.trophies = this.scenePadre.physics.add.image(430, 1765,'trophy').setImmovable();
-        this.trophyArray.push(this.trophies)
-        this.trophies = this.scenePadre.physics.add.image(230, 1505,'trophy').setImmovable();
-        this.trophyArray.push(this.trophies)
-        this.trophies = this.scenePadre.physics.add.image(430, 1055,'trophy').setImmovable();
-        this.trophyArray.push(this.trophies)
-        this.trophies = this.scenePadre.physics.add.image(530, 505,'trophy').setImmovable();
-        this.trophyArray.push(this.trophies)
-        this.trophies = this.scenePadre.physics.add.image(1400, 225,'trophy').setImmovable();
-        this.trophyArray.push(this.trophies)
+         this.trophies = this.scenePadre.physics.add.image(200, 2720,'trophy').setImmovable(); 
+         this.trophyArray.push(this.trophies); //para agregar al array anteriormente creado
+         this.trophies = this.scenePadre.physics.add.image(518, 2405,'trophy').setImmovable();
+         this.trophyArray.push(this.trophies)
+         this.trophies = this.scenePadre.physics.add.image(100, 2110,'trophy').setImmovable();
+         this.trophyArray.push(this.trophies)
+         this.trophies = this.scenePadre.physics.add.image(520, 1750,'trophy').setImmovable();
+         this.trophyArray.push(this.trophies)
+         this.trophies = this.scenePadre.physics.add.image(230, 1505,'trophy').setImmovable();
+         this.trophyArray.push(this.trophies)
+         this.trophies = this.scenePadre.physics.add.image(230, 1055,'trophy').setImmovable();
+         this.trophyArray.push(this.trophies)
+         this.trophies = this.scenePadre.physics.add.image(200, 505,'trophy').setImmovable();
+         this.trophyArray.push(this.trophies)
+         this.trophies = this.scenePadre.physics.add.image(900, 220,'trophy').setImmovable();
+         this.trophyArray.push(this.trophies) 
         //Una vez creado y agregado al array, se lo recorrera para modificar algunos comportamientos
         // se deshabilitara la gravedad y añadira la funcion collisionDetected con los parametros de trofeo y player
         this.trophyArray.forEach((trofeo) =>{
