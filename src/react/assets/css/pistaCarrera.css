@@ -1,0 +1,20 @@
+.box-llena{
+    background: green;
+    width: 50px;
+    height: 50px;
+}
+.box-vacia{
+    background: lightseagreen;
+    width: 50px;
+    height: 50px;
+}
+.box-meta{
+    background: black;
+    width: 50px;
+    height: 50px;
+}
+.box-meta-llena{
+    background: green;
+    width: 50px;
+    height: 50px;
+}
