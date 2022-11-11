@@ -9,12 +9,12 @@ export default function PistaCarrera(){
 
     const crearPista=()=>{
         return pista.map((tipo,index)=>
-        <button className={tipo}
+        <div className={tipo}
             key={index}>
-        </button>
+        </div>
         )
     }
     return(
-        <div>{crearPista()}</div>
+        <div className="pista">{crearPista()}</div>
     );   
 }
