@@ -7,14 +7,14 @@ export default class Preload extends Phaser.Scene {
     preload(){
         this.load.tilemapTiledJSON('mapa', 'img/phaser/mapa/mapa.json');
         this.load.spritesheet('dude',
-            'img/phaser/dude.png',
-            { frameWidth: 32, frameHeight: 48 }
+            'img/phaser/player2.png',
+            { frameWidth: 460, frameHeight: 593 }
         );
         this.load.image('tiles', 'img/phaser/mapa/tileSets.png');
 
         this.load.image('plataformaRoja', 'img/phaser/plataformaRoja.png');
         this.load.image('trophy', 'img/phaser/trophy.png');
-        this.load.image('bomb', 'img/phaser/bomb.png');
+        this.load.image('bomb', 'img/phaser/ghost.png');
     }
 
     //Una vez que se haya precargado lo necesario
