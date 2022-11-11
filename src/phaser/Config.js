@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Principal from './scenes/Principal';
 import Preload from './scenes/Preload';
 import Phaser from 'phaser';
+import Menu from './scenes/Menu';
 
 
 function Config() {
@@ -26,7 +27,7 @@ function Config() {
                     debug: false
                 }
             },
-            scene:[Preload, Principal]
+            scene:[Menu, Preload, Principal]
         };
 
         var game = new Phaser.Game(config);
