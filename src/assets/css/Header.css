@@ -1,0 +1,29 @@
+*{
+    font-family: 'Press Start 2P';
+    font-size: 13px;
+}
+
+nav {
+    /* border: 1px solid black; */
+    /* para aumentar tamaño verticalment */
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* para separar un poco el nav del contenido principal  */
+    margin: 10px 0 25px 0;
+}
+
+.nav-link {
+    color: #030303;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.nav-link:hover {
+    /* Necesario para que aparezca la linea abajo de cada item en el menu */
+    background:linear-gradient(rgb(7, 7, 7), rgb(30, 70, 110), rgb(156, 205, 255));
+    background-size: 100% 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+}
