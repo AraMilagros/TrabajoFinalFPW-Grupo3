@@ -5,6 +5,7 @@ function JuegoReact(){
         <>
         <h1>JuegoReact</h1>
         <PistaCarrera></PistaCarrera>
+        
         </>
         
     );
