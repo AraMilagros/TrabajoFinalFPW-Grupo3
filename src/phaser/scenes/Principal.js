@@ -18,10 +18,13 @@ export default class Principal extends Phaser.Scene {
     constructor(config) {
         super({ key: 'Principal' });
         this.config = config;
+    }
+
+    init(){ //con esto el cronometro ya se reinicia
         //objeto para el cronometro
         this.tiempo = {
-            minutos: '01',
-            segundos: '30'
+            minutos: '00',
+            segundos: '03'
         }        
     }
 
@@ -91,7 +94,7 @@ export default class Principal extends Phaser.Scene {
         //En caso de que el cronometro llegue a 0, tanto en minutos como en segundos, se pausara la escena
         if (this.tiempo.minutos <= 0 && this.tiempo.segundos <= 0) {
             // console.log("si entro");
-            this.scene.pause();
+            this.scene.start('GameOver');
         } else {
             //se controla cuando los segundos pase de 10 a 9.. en pantalla se muestre un 09/08/07 y no 9/8/7 .. etc
             this.tiempo.segundos = (this.tiempo.segundos > 9) ? this.tiempo.segundos : '0' + this.tiempo.segundos;
