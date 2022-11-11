@@ -28,7 +28,7 @@ function Config() {
                     debug: false
                 }
             },
-            scene:[Menu, Preload, Principal, GameOver]
+            scene:[Preload, Menu, Principal, GameOver]
         };
 
         var game = new Phaser.Game(config);
