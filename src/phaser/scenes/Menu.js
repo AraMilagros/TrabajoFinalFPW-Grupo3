@@ -6,11 +6,12 @@ export default class Menu extends Phaser.Scene{
     }
 
     preload(){
-        this.load.image('Menu','img/phaser/menuGame.png'); //se carga la imagen
+
         this.play.preload();
     }
  
     create(){
+        this.game.config.backgroundColor.setTo(0, 0, 0);
         this.add.image(500,200,'Menu').setScale(.5); //se agrega a la imagen y se modifica el tamaño
         this.play.create();//Aqui se llama la funcion para mostrar el button1 en la escena
     }

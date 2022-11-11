@@ -15,11 +15,15 @@ export default class Preload extends Phaser.Scene {
         this.load.image('plataformaRoja', 'img/phaser/plataformaRoja.png');
         this.load.image('trophy', 'img/phaser/trophy.png');
         this.load.image('ghost', 'img/phaser/ghost.png');
+
+        this.load.image('Menu','img/phaser/menuGame.png'); //se carga la imagen de menu
+        this.load.image('G.O','img/phaser/gameover.png'); //se carga la imagen de game over
+        
     }
 
     //Una vez que se haya precargado lo necesario
     //  se llamara a la clase principal, donde la escena del juego terminara de crearse
     create(){
-        this.scene.start('Principal');
+        this.scene.start('Menu');
     }
 }
