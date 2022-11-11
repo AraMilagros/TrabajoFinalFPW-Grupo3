@@ -5,7 +5,7 @@ import Player from '../gameObjects/Player';
 import plataformaMovible from "../gameObjects/PlataformaMovible";
 import Config from '../Config';
 import Trophy from '../gameObjects/Trophy';
-import Bomb from "../gameObjects/Bomb";
+import Ghost from "../gameObjects/Ghost";
 
 export default class Principal extends Phaser.Scene {
     mapa = null;
@@ -13,7 +13,7 @@ export default class Principal extends Phaser.Scene {
     solidos = null;   
     camaraPrincipal = null
     trophies = null;
-    bombs = null;
+    ghosts = null;
 
     constructor(config) {
         super({ key: 'Principal' });
@@ -50,8 +50,8 @@ export default class Principal extends Phaser.Scene {
         this.platformRoja.create(this.player.returnPlayer());
         //se crea el trofeo para que pueda ser visualizado y se le pasa de parametro el player para añadirle un collider y poder detectar sus colisiones
         this.trophies.create(this.player.returnPlayer());
-        this.bombs = new Bomb(this);
-        this.bombs.create(this.solidos, this.player.returnPlayer());
+        this.ghosts = new Ghost(this);
+        this.ghosts.create(this.solidos, this.player.returnPlayer());
 
         this.cronometro = this.add.text(0, 0, 'Tiempo: '+this.tiempo.minutos+':'+this.tiempo.segundos, { fontSize: '32px', fill: '#000' });
         //Este evento llamara a la funcion Cronometro() por cada segundo
@@ -70,7 +70,7 @@ export default class Principal extends Phaser.Scene {
         //Se llama el metodo que permite el movimiento del player
         this.player.move(); 
         
-        this.bombs.move();
+        this.ghosts.move();
 
         //Modifica la posicion del texto con respecto a la camara
         let x = this.camaraPrincipal.worldView.x;//Esto permitira acceder al eje x que se está mostrando actualmente
