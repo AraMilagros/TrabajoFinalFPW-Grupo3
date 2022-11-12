@@ -1,8 +1,9 @@
 
 .pista{
     display: flex;
-    height:100px;
+    height: 100px;
     padding: 10px;
+    padding-left: 13%;
 }
 .box-llena{
     position: relative;

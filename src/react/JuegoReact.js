@@ -232,21 +232,23 @@ function JuegoReact(){
     
     return(
         <div className='juego-main'>
-        <h1 className='titulo'>Slime Race</h1>
-        <h1>Turno del {turno}</h1>
-        <PistaCarrera pista={pistaArray}></PistaCarrera>
-        <PistaCarrera pista={pistaArrayPlayer2}></PistaCarrera>
+            <h1 className='titulo'>Slime Race</h1>
+            <h1 className='turno'>Turno del {turno}</h1>
+            <PistaCarrera pista={pistaArray}></PistaCarrera>
+            <PistaCarrera pista={pistaArrayPlayer2}></PistaCarrera>
         
-        {/* <div>DADO: {valorDado}</div> */}
-        <Imagen imagen={valorDado}/>
-        <button className='boton-juego' disabled={disabledBtnDado} onClick={tirarDado}>tirar dado</button>
-        {/* <div>POSICION: {contadorPasos}</div> */}
-        <button className='boton-juego' disabled={disabledBtnAvanzar} onClick={interactuar}>avanzar</button>
-        <button className='boton-juego' onClick={reiniciar}>Reiniciar</button>
-        <VentanaModalPregunta show={modalShow} onHide={funcionAlCerrarLaVentanaModal} pregunta={pregunta} verdadera={verdadera} falsa={falsa} 
-        orden={orden} dado={valorDado} turno={turno} correcta={respuestaCorrecta} incorrecta={respuestaIncorrecta}/>
-        <VentanaModalResultado show={modalShowResultado} onHide={funcionAlCerrarLaVentanaModal} ganador={ganador}/>
-        <VentanaModalCambioTurno show={modalShowCambio} onHide={cerrarVentanaModalCambio} turno={turno}/>
+            {/* <div>DADO: {valorDado}</div> */}
+            <div className='botones'>
+                <Imagen imagen={valorDado}/>
+                <button className='boton-juego' disabled={disabledBtnDado} onClick={tirarDado}>tirar dado</button>
+                {/* <div>POSICION: {contadorPasos}</div> */}
+                <button className='boton-juego' disabled={disabledBtnAvanzar} onClick={interactuar}>avanzar</button>
+                <button className='boton-juego' onClick={reiniciar}>Reiniciar</button>
+                <VentanaModalPregunta show={modalShow} onHide={funcionAlCerrarLaVentanaModal} pregunta={pregunta} verdadera={verdadera} falsa={falsa} 
+                orden={orden} dado={valorDado} turno={turno} correcta={respuestaCorrecta} incorrecta={respuestaIncorrecta}/>
+                <VentanaModalResultado show={modalShowResultado} onHide={funcionAlCerrarLaVentanaModal} ganador={ganador}/>
+                <VentanaModalCambioTurno show={modalShowCambio} onHide={cerrarVentanaModalCambio} turno={turno}/>
+            </div>
         </div>
         
     );

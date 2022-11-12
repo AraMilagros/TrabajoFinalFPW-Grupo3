@@ -12,6 +12,7 @@
 .titulo{
     font-family: Fredoka One, serif;
     font-size: 80px;
+    text-align: center;
     /* color: rgb(220, 220, 220); */
 }
 .boton-juego{
@@ -49,4 +50,10 @@
 }
 .boton-juego:disabled{
     background-color: red;
+}
+.turno{
+    text-align: center;
+}
+.botones{
+    padding-left: 35%;
 }
