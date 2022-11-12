@@ -18,7 +18,7 @@ export default function VentanaModalPregunta(props) {
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            Responde correctamente para continuar
+          Responde correctamente para avanzar {props.dado} lugares
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -43,7 +43,7 @@ export default function VentanaModalPregunta(props) {
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            Responde correctamente para continuar
+            Responde correctamente para avanzar {props.dado} lugares
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
