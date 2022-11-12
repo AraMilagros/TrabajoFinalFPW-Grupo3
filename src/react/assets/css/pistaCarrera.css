@@ -40,7 +40,7 @@
 }
 .box-meta{
     background: black;
-    background-image: url('../img/meta.png');
+    background-image: url('../img/meta2.png');
     background-size: cover;
     width: 80px;
     height: 80px;
@@ -54,7 +54,7 @@
 .box-meta-llena{
     position: relative;
     background: black;
-    background-image: url('../img/meta.png');
+    background-image: url('../img/meta2.png');
     background-size: cover;
     width: 80px;
     height: 80px;
@@ -85,3 +85,4 @@
         background-position-x: 0px;
     }
 }
+
