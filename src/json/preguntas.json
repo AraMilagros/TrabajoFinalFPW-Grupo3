@@ -84,9 +84,8 @@
     ,
     {
         "pregunta":"¿Es HTML un lenguaje de Programación?",
-        "respuestaIncorrecta":"SI",
-        "respuestaCorrecta":"NO"
-        
+        "respuestaCorrecta":"NO",
+        "respuestaIncorrecta":"SI"
     }
     ,
     {
