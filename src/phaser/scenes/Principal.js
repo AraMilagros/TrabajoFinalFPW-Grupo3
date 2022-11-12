@@ -23,7 +23,7 @@ export default class Principal extends Phaser.Scene {
     init(){ //con esto el cronometro ya se reinicia
         //objeto para el cronometro
         this.tiempo = {
-            minutos: '00',
+            minutos: '01',
             segundos: '30'
         }        
     }
@@ -82,6 +82,10 @@ export default class Principal extends Phaser.Scene {
         //Se utiliza las mismas coordenadas para el cronometro, solamente modificando el eje y para mostrarlo debajo del puntaje/score
         this.cronometro.x = this.scoreText.x;
         this.cronometro.y = this.scoreText.y + 40;
+
+        if(this.trophies.checkWin()){//regresa un true si es que todos los trofeos ya fueron recogidos
+            this.scene.start('Win');//y en caso de haberlo hecho, se llamara a la escena de ganador
+        }
 
     }
 
