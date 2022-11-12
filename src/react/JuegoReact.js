@@ -35,7 +35,7 @@ function JuegoReact(){
             let auxiliar=valorDadoTotal;
             
             auxiliar+=valorRandon;
-            if (auxiliar<=11) {
+            if (auxiliar<=14) {
                 setValorDadoTotal(valorRandon+valorDadoTotal);
                 prueba();
             }
@@ -43,7 +43,7 @@ function JuegoReact(){
             let auxiliar=valorDadoTotalJ2;
             
             auxiliar+=valorRandon;
-            if (auxiliar<=11) {
+            if (auxiliar<=14) {
                 setValorDadoTotalJ2(valorRandon+valorDadoTotalJ2);
                 prueba();
             }
@@ -65,9 +65,9 @@ function JuegoReact(){
             
         })
         if (contadorPasos+1 !== pistaAux.length) {
-            pistaAux[11] = "box-meta";
+            pistaAux[14] = "box-meta";
         }else{
-            pistaAux[11] = "box-meta-llena";
+            pistaAux[14] = "box-meta-llena";
             yaGano();
         }
         setPistaArray(pistaAux);
@@ -84,9 +84,9 @@ function JuegoReact(){
             
         })
         if (contadorPasosJ2+1 !== pistaAux.length) {
-            pistaAux[11] = "box-meta";
+            pistaAux[14] = "box-meta";
         }else{
-            pistaAux[11] = "box-meta-llena";
+            pistaAux[14] = "box-meta-llena";
             yaGano();
         }
         setPistaArrayPlayer2(pistaAux);
@@ -160,14 +160,14 @@ function JuegoReact(){
             pistaAux[index]="box-vacia";
         })
         pistaAux[0]="box-llena";
-        pistaAux[11]="box-meta";
+        pistaAux[14]="box-meta";
 
         let pistaAux2 = PISTA2;
         pistaAux2.map((tipo, index) => {
             pistaAux2[index]="box-vacia";
         })
         pistaAux2[0]="box-llena";
-        pistaAux2[11]="box-meta";
+        pistaAux2[14]="box-meta";
         setPistaArray(pistaAux);
         setPistaArrayPlayer2(pistaAux2);
         habilitarBotones();
@@ -206,7 +206,8 @@ function JuegoReact(){
         {/* <div>POSICION: {contadorPasos}</div> */}
         <button disabled={disabledBtnAvanzar} onClick={interactuar}>avanzar</button>
         <button onClick={reiniciar}>Reiniciar</button>
-        <VentanaModalPregunta show={modalShow} onHide={funcionAlCerrarLaVentanaModal} pregunta={pregunta} verdadera={verdadera} falsa={falsa} orden={orden} dado={valorDado} correcta={respuestaCorrecta} incorrecta={respuestaIncorrecta}/>
+        <VentanaModalPregunta show={modalShow} onHide={funcionAlCerrarLaVentanaModal} pregunta={pregunta} verdadera={verdadera} falsa={falsa} 
+        orden={orden} dado={valorDado} turno={turno} correcta={respuestaCorrecta} incorrecta={respuestaIncorrecta}/>
         <VentanaModalResultado show={modalShowResultado} onHide={funcionAlCerrarLaVentanaModal} ganador={ganador}/>
         </>
         

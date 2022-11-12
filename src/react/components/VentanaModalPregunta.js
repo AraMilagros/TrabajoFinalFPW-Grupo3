@@ -18,10 +18,11 @@ export default function VentanaModalPregunta(props) {
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-          Responde correctamente para avanzar {props.dado} lugares
+          Responde correctamente para avanzar {props.dado} lugar/es
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
+        <h5>Turno del {props.turno}</h5>
         <h4>{props.pregunta}</h4>
         <h5>A-{props.verdadera}</h5>
         <h5>B-{props.falsa}</h5>
@@ -43,10 +44,11 @@ export default function VentanaModalPregunta(props) {
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            Responde correctamente para avanzar {props.dado} lugares
+            Responde correctamente para avanzar {props.dado} lugar/es
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
+        <h5>Turno del {props.turno}</h5>
         <h4>{props.pregunta}</h4>
         <h5>A-{props.falsa}</h5>
         <h5>B-{props.verdadera}</h5>
