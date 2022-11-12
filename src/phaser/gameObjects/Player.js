@@ -8,7 +8,7 @@ export default class Player extends Phaser.GameObjects.Sprite{
 
     create(solidos){
         this.player = this.scenePadre.physics.add.sprite(470, 2720, 'player').setScale(0.09);
-        this.player.setBounce(0.2);
+        this.player.setBounce(0.1);
         
         //animaciones
         this.scenePadre.anims.create({

@@ -23,8 +23,8 @@ export default class Principal extends Phaser.Scene {
     init(){ //con esto el cronometro ya se reinicia
         //objeto para el cronometro
         this.tiempo = {
-            minutos: '00',
-            segundos: '03'
+            minutos: '01',
+            segundos: '20'
         }        
     }
 
@@ -72,8 +72,6 @@ export default class Principal extends Phaser.Scene {
         this.platformRoja.move();
         //Se llama el metodo que permite el movimiento del player
         this.player.move(); 
-        
-        this.ghosts.move();
 
         //Modifica la posicion del texto con respecto a la camara
         let x = this.camaraPrincipal.worldView.x;//Esto permitira acceder al eje x que se está mostrando actualmente
