@@ -4,13 +4,14 @@ import Phaser from "phaser";
 import Player from '../gameObjects/Player';
 import plataformaMovible from "../gameObjects/PlataformaMovible";
 import Config from '../Config';
+import Trophy from '../gameObjects/Trophy';
 
 export default class Principal extends Phaser.Scene {
     mapa = null;
     player = null;
-    solidos = null;
-    scoreText = null;
-    camaraPrincipal = null;
+    solidos = null;   
+    camaraPrincipal = null
+    trophies = null;
 
     constructor(config) {
         super({ key: 'Principal' });
@@ -24,7 +25,8 @@ export default class Principal extends Phaser.Scene {
         let tilesets = this.mapa.addTilesetImage('tileSets', 'tiles');
         this.solidos = this.mapa.createLayer('solido', tilesets, 0, 0);
         this.solidos.setCollisionByProperty({ solido: true });
-
+        
+        this.trophies= new Trophy(this);//Se instancia el trofeo "this"
         //Se crea el jugador
         this.player = new Player(this);//se instancia la clase Player, pasandole esta escena que es donde se creara
         //Se crea el player para poder se visualizado en la escena, tambien se crea las animaciones
@@ -39,9 +41,11 @@ export default class Principal extends Phaser.Scene {
         //Pasa la mismo que en Player, se llama el metodo para crear la plataform y ser visualizado
         // y se pasa el player para añadirle un collider y poder detectar sus colisiones
         this.platformRoja.create(this.player.returnPlayer());
+        //se crea el trofeo para que pueda ser visualizado y se le pasa de parametro el player para añadirle un collider y poder detectar sus colisiones
+        this.trophies.create(this.player.returnPlayer());
 
         // this.scoreText = this.add.text(0, 0, 'score: 0', { fontSize: '32px', fill: '#000' });
-        this.scoreText = this.add.text(0, 0, 'score: 0', { fontSize: '32px', fill: '#000' });
+       
     }
     
     update(){
@@ -57,4 +61,5 @@ export default class Principal extends Phaser.Scene {
         this.scoreText.y = y+30;
         
     }
+
 }

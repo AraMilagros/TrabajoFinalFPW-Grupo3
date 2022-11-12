@@ -1,0 +1,121 @@
+[
+    {
+        "pregunta":"¿A cuál WEB se la conoce también como la 'Web Semántica'?",
+        "respuestaCorrecta":"WEB 3.0",
+        "respuestaIncorrecta":"WEB 2.0"
+    },
+    {
+        "pregunta":"¿Qué sinifican las siglas WWW?",
+        "respuestaCorrecta":"World Wide Web",
+        "respuestaIncorrecta":"World Web Wide"
+    }
+    ,
+    {
+        "pregunta":"¿Qué sinifican las siglas OSI?",
+        "respuestaCorrecta":" Interconexión de sistemas abiertos",
+        "respuestaIncorrecta":" Organización Internacional de Normalización"
+    }
+    ,
+    {
+        "pregunta":"¿Con cuál comando de HTTP que solicita el recurso correspondiente al servidor sin modificar su estado?",
+        "respuestaCorrecta":"GET",
+        "respuestaIncorrecta":"PUT"
+    }
+    ,
+    {
+        "pregunta":"¿Cual es un lenguaje de marca?",
+        "respuestaCorrecta":"XML",
+        "respuestaIncorrecta":"JavaScript"
+    }
+    ,
+    {
+        "pregunta":"¿Cual es una variable de bloque?",
+        "respuestaCorrecta":"let",
+        "respuestaIncorrecta":"var"
+    }
+    ,
+    {
+        "pregunta":"¿Cual es un elemento de bloque?",
+        "respuestaCorrecta":"<h1>",
+        "respuestaIncorrecta":"<a>"
+    }
+    ,
+    {
+        "pregunta":"¿Cual es un elemento de linea?",
+        "respuestaCorrecta":"<img>",
+        "respuestaIncorrecta":"<p>"
+    }
+    ,
+    {
+        "pregunta":"¿Cual es un elemento de bloque?",
+        "respuestaCorrecta":"<article>",
+        "respuestaIncorrecta":"<select>"
+    }
+    ,
+    {
+        "pregunta":"¿Cual es un elemento de linea?",
+        "respuestaCorrecta":"<button>",
+        "respuestaIncorrecta":"<header>"
+    }
+    ,
+    {
+        "pregunta":"¿Cual no es un elemento de linea?",
+        "respuestaCorrecta":"<div>",
+        "respuestaIncorrecta":"<script>"
+    }
+    ,
+    {
+        "pregunta":"¿Cual es un modelo de Layout que permite alinear los elementos en dos direcciones?",
+        "respuestaCorrecta":"FLEXBOX",
+        "respuestaIncorrecta":"BOXMODEL"
+    }
+    ,
+    {
+        "pregunta":"¿Mediante cual propiedad se pueden manipular la dirección y el comportamiento de los ítems a lo largo del eje principal?",
+        "respuestaCorrecta":"flex-direction",
+        "respuestaIncorrecta":"justify-content"
+    }
+    ,
+    {
+        "pregunta":"¿Cual es la propiedad que alinea los items en el eje secundario?",
+        "respuestaCorrecta":"align-ítems",
+        "respuestaIncorrecta":"flex-wrap"
+    }
+    ,
+    {
+        "pregunta":"¿Es HTML un lenguaje de Programación?",
+        "respuestaCorrecta":"NO",
+        "respuestaIncorrecta":"SI"
+    }
+    ,
+    {
+        "pregunta":"¿Cual etiqueta se utiliza para definir títulos HTML?",
+        "respuestaCorrecta":"<h1> a <h6>",
+        "respuestaIncorrecta":"<title>"
+    }
+    ,
+    {
+        "pregunta":"¿Cual etiqueta es un elemento de bloque que se utiliza como un contenedor para otros elementos  HTML?",
+        "respuestaCorrecta":"<div>",
+        "respuestaIncorrecta":"<section>"
+    }
+    ,
+    {
+        "pregunta":"¿Cual etiqueta especifica un pie de página de un documento o sección?",
+        "respuestaCorrecta":"<footer>",
+        "respuestaIncorrecta":"<section>"
+    }
+    ,
+    {
+        "pregunta":"¿Cual etiqueta específica contenido independiente, autónomo?",
+        "respuestaCorrecta":"<article>",
+        "respuestaIncorrecta":"<aside>"
+    }
+    ,
+    {
+        "pregunta":"¿Cual es el lenguaje de estilos utilizado para describir la presentación de documentos HTML?",
+        "respuestaCorrecta":"CSS",
+        "respuestaIncorrecta":"XML"
+    }
+
+]

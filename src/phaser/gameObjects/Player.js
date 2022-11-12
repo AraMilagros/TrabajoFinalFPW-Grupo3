@@ -1,5 +1,5 @@
 export default class Player extends Phaser.GameObjects.Sprite{
-    isFlooer = true;
+    //isFlooer = true;
 
     constructor(scene){
         super(scene);
@@ -8,7 +8,6 @@ export default class Player extends Phaser.GameObjects.Sprite{
 
     create(solidos){
         this.player = this.scenePadre.physics.add.sprite(520, 2720, 'dude').setScale(1.5);
-        
         this.player.setBounce(0.2);
         
         //animaciones
@@ -33,7 +32,7 @@ export default class Player extends Phaser.GameObjects.Sprite{
             frameRate: 20
         });
 
-        this.detectedCollider(solidos);
+        this.detectedCollider(solidos);     
     }
 
 
@@ -49,20 +48,20 @@ export default class Player extends Phaser.GameObjects.Sprite{
             this.player.setVelocityX(0);
             this.player.anims.play('turn');
         }
-        if (this.cursors.up.isDown && (this.isFloor || this.player.body.touching.down)) {
+        if (this.cursors.up.isDown && this.player.body.onFloor()) { //con "body.onFloor()" controla que no salte 2 veces
             this.player.setVelocityY(-430);
-            this.checkJump();//Es evitar que pueda saltar en el aire
+           // this.checkJump();//Es evitar que pueda saltar en el aire
         }
     }
 
     detectedCollider(solidos){
-        this.scenePadre.physics.add.collider(this.player, solidos, this.checkJump, null, this);
+        this.scenePadre.physics.add.collider(this.player, solidos);
         
     }
 
-    checkJump(){
+    /*checkJump(){
         this.isFloor = !this.isFloor;
-    }
+    }*/
 
     returnPlayer(){
         return this.player;
