@@ -13,7 +13,7 @@
 
 .juego-main{
     height: 100%;
-    /* background-color: rgba(108, 18, 12, 0.896); */
+    background-color: rgba(108, 18, 12, 0.896);
     background-image: url('../img/backgroud.jpg');
     background-size: cover;
     /* background-image: url('../img/piso.jpg'); */
@@ -28,6 +28,8 @@
     /* color: rgb(220, 220, 220); */
 }
 .tablero{
+    display: flex;
+    flex-direction: column;
     background-color: rgba(70, 5, 0, 0.896);
     border: 2px var(--color-gris) solid;
     padding: 10px;
@@ -35,6 +37,7 @@
     border-radius: 10px;
     box-shadow: -3px 3px 0px var(--color1),
                 -6px 6px 10px var(--color1);
+    align-items: center;
 
 }
 .tablero h3{

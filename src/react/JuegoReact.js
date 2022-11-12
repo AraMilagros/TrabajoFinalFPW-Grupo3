@@ -5,7 +5,7 @@ import {PISTA,PISTA2} from'./components/Constante';
 import VentanaModalPregunta from './components/VentanaModalPregunta';
 import VentanaModalResultado from './components/VentanaModalResultado';
 import VentanaModalCambioTurno from './components/VentanaModalCambioTurno';
-import preguntas from './../json/preguntas.json';
+import preguntas from './assets/json/preguntas.json';
 
 import './assets/css/juegoReact.css';
 import Imagen from './components/Imagen';

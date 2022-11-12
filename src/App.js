@@ -2,12 +2,12 @@ import React from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 import Config from './phaser/Config';
 import JuegoReact from './react/JuegoReact';
-import './style/backgroundStyle.css'
+// import './style/backgroundStyle.css'
 
 function App() {
     return (
         <>
-            <div className='general'>
+            <div>
                 <nav>
                     <ul>
                         <li>
