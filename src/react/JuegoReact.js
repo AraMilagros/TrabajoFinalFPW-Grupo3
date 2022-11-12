@@ -3,6 +3,7 @@ import PistaCarrera from './components/PistaCarrera';
 import {PISTA,PISTA2} from'./components/Constante';
 import VentanaModalPregunta from './components/VentanaModalPregunta';
 import VentanaModalResultado from './components/VentanaModalResultado';
+import VentanaModalCambioTurno from './components/VentanaModalCambioTurno';
 import preguntas from './../json/preguntas.json';
 
 import './assets/css/juegoReact.css';
@@ -13,6 +14,7 @@ function JuegoReact(){
 
     const[modalShow, setModalShow] = useState(false);
     const[modalShowResultado, setModalShowResultado] = useState(false);
+    const[modalShowCambio, setModalShowCambio] = useState(false);
     const[ganador, setGanador]=useState("");
     const[pregunta, setPregunta]=useState("");
     const[falsa, setFalsa] = useState("");
@@ -117,13 +119,16 @@ function JuegoReact(){
                     setTurno("Player 2");
                     setDisabledBtnDado(false);
                     setDisabledBtnAvanzar(true);
+                    //setModalShowCambio(true);
                 }
             }else{
                 setValorDadoTotal(valorDadoTotal-valorDado);
                 setTurno("Player 2");
                 setDisabledBtnDado(false);
                 setDisabledBtnAvanzar(true);
+                setModalShowCambio(true);
             }
+            //setModalShowCambio(true);
         }else{
             if (respuesta) {
                 if (contadorPasosJ2<=valorDadoTotalJ2) {
@@ -139,7 +144,9 @@ function JuegoReact(){
                 setTurno("Player 1");
                 setDisabledBtnDado(false);
                 setDisabledBtnAvanzar(true);
+                setModalShowCambio(true);
             }
+            //setModalShowCambio(true);
         }
     }
     
@@ -157,6 +164,12 @@ function JuegoReact(){
         setModalShowResultado(false);
         respuestaIncorrecta();
         setGanador("");
+    }
+    const cerrarVentanaModalCambio = () =>{
+        setModalShowCambio(false);// oculta la ventana modal
+        // setModalShowResultado(false);
+        // respuestaIncorrecta();
+        // setGanador("");
     }
 
     const reiniciar = () =>{
@@ -209,7 +222,7 @@ function JuegoReact(){
     return(
         <div className='juego-main'>
         <h1 className='titulo'>Slime Race</h1>
-        <h3>Turno del {turno}</h3>
+        <h1>Turno del {turno}</h1>
         <PistaCarrera pista={pistaArray}></PistaCarrera>
         <PistaCarrera pista={pistaArrayPlayer2}></PistaCarrera>
         
@@ -222,6 +235,7 @@ function JuegoReact(){
         <VentanaModalPregunta show={modalShow} onHide={funcionAlCerrarLaVentanaModal} pregunta={pregunta} verdadera={verdadera} falsa={falsa} 
         orden={orden} dado={valorDado} turno={turno} correcta={respuestaCorrecta} incorrecta={respuestaIncorrecta}/>
         <VentanaModalResultado show={modalShowResultado} onHide={funcionAlCerrarLaVentanaModal} ganador={ganador}/>
+        <VentanaModalCambioTurno show={modalShowCambio} onHide={cerrarVentanaModalCambio} turno={turno}/>
         </div>
         
     );
