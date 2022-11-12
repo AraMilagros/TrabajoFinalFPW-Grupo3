@@ -31,7 +31,7 @@ export default class Player extends Phaser.GameObjects.Sprite{
             frames: [{ key: 'player', frame: 3 }],
             frameRate: 20
         });
-
+        this.audio = this.scenePadre.sound.add("jump", {loop : false});
         this.detectedCollider(solidos);     
     }
 
@@ -50,6 +50,8 @@ export default class Player extends Phaser.GameObjects.Sprite{
         }
         if (this.cursors.up.isDown && this.player.body.onFloor()) { //con "body.onFloor()" controla que no salte 2 veces
             this.player.setVelocityY(-400);
+             this.audio.play();
+             this.audio.volume= 0.15;
            // this.checkJump();//Es evitar que pueda saltar en el aire
         }
     }
