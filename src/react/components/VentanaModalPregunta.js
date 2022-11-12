@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import '../assets/css/juegoReact.css';
+import '../assets/css/ventanaModal.css';
 //let resp = false;
 export default function VentanaModalPregunta(props) {
   // const validar = (props)=>{
@@ -18,21 +18,21 @@ export default function VentanaModalPregunta(props) {
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
+        <Modal.Header className='modal-header' closeButton>
+          <Modal.Title className='modal-title' id="contained-modal-title-vcenter">
           Responde correctamente para avanzar {props.dado} lugar/es
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-        <h5>Turno del {props.turno}</h5>
+        <Modal.Body className='modal-body'>
+        <h3>Turno del {props.turno}</h3>
         <h4>{props.pregunta}</h4>
         <h5>A-{props.verdadera}</h5>
         <h5>B-{props.falsa}</h5>
         </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer className='modal-footer'>
           <button className='boton-juego' onClick={props.correcta}>Opcion A</button>
           {/* <Button onClick={props.correcta}>Opcion A</Button> */}
-          <Button onClick={props.incorrecta}>Opcion B</Button>
+          <button className='boton-juego' onClick={props.incorrecta}>Opcion B</button>
         </Modal.Footer>
       </Modal>
     );
@@ -45,20 +45,20 @@ export default function VentanaModalPregunta(props) {
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
+        <Modal.Header className='modal-header' closeButton>
+          <Modal.Title className='modal-title' id="contained-modal-title-vcenter">
             Responde correctamente para avanzar {props.dado} lugar/es
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className='modal-body'>
         <h5>Turno del {props.turno}</h5>
         <h4>{props.pregunta}</h4>
         <h5>A-{props.falsa}</h5>
         <h5>B-{props.verdadera}</h5>
         </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={props.incorrecta}>Opcion A</Button>
-          <Button onClick={props.correcta}>Opcion B</Button>
+        <Modal.Footer className='modal-footer'>
+          <button className='boton-juego' onClick={props.incorrecta}>Opcion A</button>
+          <button className='boton-juego' onClick={props.correcta}>Opcion B</button>
         </Modal.Footer>
       </Modal>
     );

@@ -5,23 +5,89 @@
 .color5 {color: #f8efed;} */
 :root{
     --color1:#400907;
+    --color2:#593907;
+    --color-primario:#2088d8;
+    --color-gris:#e4d3ed;
+    --color-blanco:#f8efed;
 }
-/* .juego-main{
-    background-color: var(--color1);
-} */
+
+.juego-main{
+    height: 100%;
+    background-color: rgba(108, 18, 12, 0.896);
+    background-image: url('../img/backgroud.jpg');
+    background-size: cover;
+    /* background-image: url('../img/piso.jpg'); */
+    /* background-size: cover; */
+}
 .titulo{
     font-family: Fredoka One, serif;
     font-size: 80px;
     text-align: center;
+    text-shadow: -4px 4px 0px var(--color1), 1px -1px 0px #000000;
+    color: var(--color-blanco);
     /* color: rgb(220, 220, 220); */
 }
-.boton-juego{
+.tablero{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(70, 5, 0, 0.896);
+    border: 2px var(--color-gris) solid;
     padding: 10px;
-    margin: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: -3px 3px 0px var(--color1),
+                -6px 6px 10px var(--color1);
+    align-items: center;
+
+}
+.tablero h3{
+    font-family: Fredoka One, serif;
+    font-size: 25px;
+    text-align: center;
+    text-shadow: -4px 4px 0px var(--color1), 1px -1px 0px #000000;
+    color: var(--color-blanco);
+    
+}
+
+.conteiner-interactivo{
+    /* border: 5px solid black; */
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.dado{
+    background-color: rgba(70, 5, 0, 0.896);
+    display: flex;
+    border: 2px solid var(--color-gris);
+    width: 25%;
+    height: 20vh;
+    padding: 10px;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: -3px 3px 0px var(--color1),
+                -6px 6px 10px var(--color1);
+
+}
+.botones-conteiner{
+    background-color: rgba(70, 5, 0, 0.896);
+    display: flex;
+    border: 2px solid var(--color-gris);
+    width: 25%;
+    height: 20vh;
+    padding: 10px;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: -3px 3px 0px var(--color1),
+                -6px 6px 10px var(--color1);
+}
+.boton-juego{
+    padding: 15px;
+    margin: 15px;
     position: relative;
     border: 1px solid #28c2b8;
-    background: #a6fbf5;
-    color: #04e5d6;
+    background: #7df8f0;
+    color: #01c3b6;
+    font-family:Fredoka One, serif; 
     font-size: 20px;
     text-shadow: 1px 1px 0px #fff, -1px -1px 0px #06b6aa;
     box-shadow: 0px 1px 0px hsl(180,100%,40%),
@@ -35,8 +101,8 @@
                 0px 9px 0px hsl(180,100%,31%),
                 0px 10px 0px hsl(180,100%,20%),
                 0px 11px 10px #000,
-                inset 0px -20px 6px rgb(28 242 228 / 40%);
-    border-radius: 8px / 50%;
+                inset 0px -20px 6px rgba(17, 213, 200, 0.4);
+    border-radius: 8px / 20%;
 }
 .boton-juego:hover{
     box-shadow: 0px 1px 0px hsl(180,100%,40%),
@@ -49,11 +115,18 @@
     transform: translateY(4px);
 }
 .boton-juego:disabled{
-    background-color: red;
-}
-.turno{
-    text-align: center;
-}
-.botones{
-    padding-left: 37.4%;
+    border: 1px solid #c22828;
+    background-color: #ff8080;
+    color: #f41b1b;
+    text-shadow: 1px 1px 0px #fff, -1px -1px 0px #b60606;
+    box-shadow: 0px 1px 0px hsl(0, 100%, 40%),
+                0px 2px 0px hsl(0, 100%, 37%),
+                0px 3px 0px hsl(0, 100%, 35%),
+                0px 4px 0px hsl(0, 100%, 33%),
+                0px 5px 0px hsl(0, 100%, 31%),
+                0px 6px 0px hsl(0, 100%, 20%),
+                0px 7px 10px #000,
+                inset 0px -20px 6px rgba(242, 28, 28, 0.4);
+
+                transform: translateY(4px);
 }

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import ReactHowler from 'react-howler';
+// import ReactHowler from 'react-howler';
 import PistaCarrera from './components/PistaCarrera';
 import {PISTA,PISTA2} from'./components/Constante';
 import VentanaModalPregunta from './components/VentanaModalPregunta';
 import VentanaModalResultado from './components/VentanaModalResultado';
 import VentanaModalCambioTurno from './components/VentanaModalCambioTurno';
-import preguntas from './../json/preguntas.json';
+import preguntas from './assets/json/preguntas.json';
 
 import './assets/css/juegoReact.css';
 import Imagen from './components/Imagen';
@@ -111,7 +111,7 @@ function JuegoReact(){
     }
     const yaGano = () =>{
         setModalShowResultado(true);
-        setGanador(turno);
+        setGanador(turno);      
         deshabilitarBotones();
     }
 
@@ -133,7 +133,7 @@ function JuegoReact(){
                 setTurno("Player 2");
                 setDisabledBtnDado(false);
                 setDisabledBtnAvanzar(true);
-                setModalShowCambio(true);
+                // setModalShowCambio(true);
             }
             //setModalShowCambio(true);
         }else{
@@ -152,7 +152,7 @@ function JuegoReact(){
                 setTurno("Player 1");
                 setDisabledBtnDado(false);
                 setDisabledBtnAvanzar(true);
-                setModalShowCambio(true);
+                // setModalShowCambio(true);
             }
             //setModalShowCambio(true);
         }
@@ -174,7 +174,9 @@ function JuegoReact(){
         setGanador("");
     }
     const cerrarVentanaModalCambio = () =>{
+        setRespuesta(null);
         setModalShowCambio(false);// oculta la ventana modal
+        interactuar();
         // setModalShowResultado(false);
         // respuestaIncorrecta();
         // setGanador("");
@@ -217,6 +219,7 @@ function JuegoReact(){
         new Audio(incorrect).play();
         setModalShow(false);// oculta la ventana modal
         setRespuesta(false);
+        setModalShowCambio(true);
         console.log(respuesta);
     }
 
@@ -233,22 +236,28 @@ function JuegoReact(){
     return(
         <div className='juego-main'>
             <h1 className='titulo'>Slime Race</h1>
-            <h1 className='turno'>Turno del {turno}</h1>
-            <PistaCarrera pista={pistaArray}></PistaCarrera>
-            <PistaCarrera pista={pistaArrayPlayer2}></PistaCarrera>
-        
-            {/* <div>DADO: {valorDado}</div> */}
-            <div className='botones'>
-                <Imagen imagen={valorDado}/>
-                <button className='boton-juego' disabled={disabledBtnDado} onClick={tirarDado}>tirar dado</button>
-                {/* <div>POSICION: {contadorPasos}</div> */}
-                <button className='boton-juego' disabled={disabledBtnAvanzar} onClick={interactuar}>avanzar</button>
-                <button className='boton-juego' onClick={reiniciar}>Reiniciar</button>
-                <VentanaModalPregunta show={modalShow} onHide={funcionAlCerrarLaVentanaModal} pregunta={pregunta} verdadera={verdadera} falsa={falsa} 
-                orden={orden} dado={valorDado} turno={turno} correcta={respuestaCorrecta} incorrecta={respuestaIncorrecta}/>
-                <VentanaModalResultado show={modalShowResultado} onHide={funcionAlCerrarLaVentanaModal} ganador={ganador}/>
-                <VentanaModalCambioTurno show={modalShowCambio} onHide={cerrarVentanaModalCambio} turno={turno}/>
+
+            <div className='tablero'>
+                <h3>Turno del {turno}</h3>
+                <PistaCarrera pista={pistaArray}></PistaCarrera>
+                <PistaCarrera pista={pistaArrayPlayer2}></PistaCarrera>
             </div>
+
+            <div className='conteiner-interactivo'>
+                <div className='dado'>
+                    <Imagen imagen={valorDado} />
+                    <button className='boton-juego' disabled={disabledBtnDado} onClick={tirarDado}>Tirar Dado</button>
+                </div>
+
+                <div className='botones-conteiner'>
+                    <button className='boton-juego' disabled={disabledBtnAvanzar} onClick={interactuar}>Avanzar</button>
+                    <button className='boton-juego' onClick={reiniciar}>Reiniciar</button>
+                </div>
+            </div>
+            <VentanaModalPregunta show={modalShow} onHide={funcionAlCerrarLaVentanaModal} pregunta={pregunta} verdadera={verdadera} falsa={falsa}
+                orden={orden} dado={valorDado} turno={turno} correcta={respuestaCorrecta} incorrecta={respuestaIncorrecta} />
+            <VentanaModalResultado show={modalShowResultado} onHide={funcionAlCerrarLaVentanaModal} ganador={ganador} />
+            <VentanaModalCambioTurno show={modalShowCambio} onHide={cerrarVentanaModalCambio} turno={turno} />
         </div>
         
     );
