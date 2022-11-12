@@ -4,6 +4,7 @@ import Preload from './scenes/Preload';
 import Phaser from 'phaser';
 import Menu from './scenes/Menu';
 import GameOver from './scenes/GameOver'
+import Win from './scenes/Win';
 
 
 function Config() {
@@ -28,7 +29,7 @@ function Config() {
                     debug: false
                 }
             },
-            scene:[Preload, Menu, Principal, GameOver]
+            scene:[Preload, Menu, Principal, GameOver, Win]
         };
 
         var game = new Phaser.Game(config);
