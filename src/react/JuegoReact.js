@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ReactHowler from 'react-howler';
 import PistaCarrera from './components/PistaCarrera';
 import {PISTA,PISTA2} from'./components/Constante';
 import VentanaModalPregunta from './components/VentanaModalPregunta';
@@ -9,6 +10,10 @@ import preguntas from './../json/preguntas.json';
 import './assets/css/juegoReact.css';
 import Imagen from './components/Imagen';
 import win from './assets/sound/win.wav';
+import jump from './assets/sound/jump.mp3';
+import correct from './assets/sound/respuestaCorrecta.mp3';
+import incorrect from './assets/sound/respuestaIncorrecta.mp3';
+import botonAll from './assets/sound/botonAll.mp3';
 
 function JuegoReact(){
 
@@ -40,6 +45,7 @@ function JuegoReact(){
     })
 
     const tirarDado=()=>{
+        new Audio(botonAll).play();
         let valorRandon=Math.ceil(Math.random()*6)
         setValorDado(valorRandon);
         if (turno === "Player 1") {
@@ -115,6 +121,7 @@ function JuegoReact(){
                 if (contadorPasos<=valorDadoTotal) {
                     setContadorPasos(contadorPasos+1);
                     moverEnUno();
+                    new Audio(jump).play();
                 }else{
                     setTurno("Player 2");
                     setDisabledBtnDado(false);
@@ -134,6 +141,7 @@ function JuegoReact(){
                 if (contadorPasosJ2<=valorDadoTotalJ2) {
                     setContadorPasosJ2(contadorPasosJ2+1);
                     moverEnUno();
+                    new Audio(jump).play();
                 }else{
                     setTurno("Player 1");
                     setDisabledBtnDado(false);
@@ -173,6 +181,7 @@ function JuegoReact(){
     }
 
     const reiniciar = () =>{
+        new Audio(botonAll).play();
         setContadorPasos(1);
         setContadorPasosJ2(1);
         setValorDado(0);
@@ -198,12 +207,14 @@ function JuegoReact(){
     }
 
     const respuestaCorrecta = () =>{
+        new Audio(correct).play();
         setModalShow(false);// oculta la ventana modal
         setRespuesta(true);
         console.log(respuesta);
     }
 
     const respuestaIncorrecta = () =>{
+        new Audio(incorrect).play();
         setModalShow(false);// oculta la ventana modal
         setRespuesta(false);
         console.log(respuesta);
