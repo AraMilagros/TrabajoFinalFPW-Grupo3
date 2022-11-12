@@ -1,17 +1,19 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-
+import '../assets/css/juegoReact.css';
 //let resp = false;
 export default function VentanaModalPregunta(props) {
   // const validar = (props)=>{
   //   resp = props;
   //   console.log(props);
   // }
+  const {incorrecta,correcta,...other}=props
   if (props.orden === 1) {
     console.log(props.orden);
     return (
       <Modal
-        {...props}
+        show={props.show} onHide={props.onHide}
+        {...other}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
@@ -28,7 +30,8 @@ export default function VentanaModalPregunta(props) {
         <h5>B-{props.falsa}</h5>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={props.correcta}>Opcion A</Button>
+          <button className='boton-juego' onClick={props.correcta}>Opcion A</button>
+          {/* <Button onClick={props.correcta}>Opcion A</Button> */}
           <Button onClick={props.incorrecta}>Opcion B</Button>
         </Modal.Footer>
       </Modal>
@@ -37,7 +40,7 @@ export default function VentanaModalPregunta(props) {
     console.log(props.orden);
     return (
       <Modal
-        {...props}
+        {...other}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
