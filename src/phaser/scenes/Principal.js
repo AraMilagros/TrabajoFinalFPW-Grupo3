@@ -14,6 +14,7 @@ export default class Principal extends Phaser.Scene {
     camaraPrincipal = null
     trophies = null;
     ghosts = null;
+    fondo =  null;
 
     constructor(config) {
         super({ key: 'Principal' });
@@ -23,10 +24,10 @@ export default class Principal extends Phaser.Scene {
     init(){ //con esto el cronometro ya se reinicia
         //objeto para el cronometro
         this.tiempo = {
-            minutos: '01',
+            minutos: '02',
             segundos: '30'
         }        
-    }
+    } 
 
     create(){
         this.game.config.backgroundColor.setTo(108, 170, 222);
@@ -55,6 +56,11 @@ export default class Principal extends Phaser.Scene {
         this.trophies.create(this.player.returnPlayer());
         this.ghosts = new Ghost(this);
         this.ghosts.create(this.solidos, this.player.returnPlayer());
+        
+        this.sound.stopAll();
+        
+        this.fondo=this.sound.add('fondo')
+        this.fondo.play({loop:true,volume:0.1,seek:2});
 
         this.cronometro = this.add.text(0, 0, 'Tiempo: '+this.tiempo.minutos+':'+this.tiempo.segundos, { fontSize: '32px', fill: '#000' });
         //Este evento llamara a la funcion Cronometro() por cada segundo

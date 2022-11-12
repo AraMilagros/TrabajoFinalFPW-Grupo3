@@ -39,6 +39,7 @@ export default class Trophy extends Phaser.GameObjects.Sprite {
         })
         this.totalTrophy = this.trophyArray.length;//aqui se guarda la cantidad de trofeos que tendran que recogerse
         this.scenePadre.scoreText = this.scenePadre.add.text(0, 0, 'score: 0', { fontSize: '32px', fill: '#000' }); //esto agrega el score
+        this.audio = this.scenePadre.sound.add("trophy", {loop : false});
     }
 
     collisionDetected(trophies, player) { //indica a Phaser que monitorice si hay una superposición entre el personaje y el trofeo
@@ -50,6 +51,7 @@ export default class Trophy extends Phaser.GameObjects.Sprite {
         this.score += 10; //al impactar se suma de 10 en 10
         this.scenePadre.scoreText.setText('Score: ' + this.score); //se setea el score
         this.trophyRecogidos++;
+        this.audio.play();
     }
 
     checkWin() {

@@ -28,7 +28,7 @@ export class Button1 {
             //Y cuando el cursor ya no este encima del button, volvera al primer frame
             this.start.setFrame(0);       
         });
-
+        this.audio = this.relatedScene.sound.add("fondo", {loop : true});
         this.start.on('pointerdown', () => {
             //Recien cuando se detecte un click encima del button, volvera a cargar la escena del Nivel1
             this.relatedScene.scene.start('Principal');
