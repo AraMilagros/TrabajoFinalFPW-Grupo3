@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ReactHowler from 'react-howler';
+// import ReactHowler from 'react-howler';
 import PistaCarrera from './components/PistaCarrera';
 import {PISTA,PISTA2} from'./components/Constante';
 import VentanaModalPregunta from './components/VentanaModalPregunta';
