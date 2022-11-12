@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import PistaCarrera from './components/PistaCarrera';
-import PISTA from'./components/Constante';
-import PISTA2 from'./components/Constante2';
+import {PISTA,PISTA2} from'./components/Constante';
 import VentanaModalPregunta from './components/VentanaModalPregunta';
 import VentanaModalResultado from './components/VentanaModalResultado';
 import preguntas from './../json/preguntas.json';
+
+import './assets/css/juegoReact.css';
+import Imagen from './components/Imagen';
+import win from './assets/sound/win.wav';
 
 function JuegoReact(){
 
@@ -28,6 +31,12 @@ function JuegoReact(){
     const [contadorPasosJ2,setContadorPasosJ2]=useState(1);
     const [pistaArrayPlayer2,setPistaArrayPlayer2]=useState(PISTA2);
     
+    useEffect(()=>{
+        if (ganador !== "") {
+            new Audio(win).play();
+        }
+    })
+
     const tirarDado=()=>{
         let valorRandon=Math.ceil(Math.random()*6)
         setValorDado(valorRandon);
@@ -147,6 +156,7 @@ function JuegoReact(){
         setModalShow(false);// oculta la ventana modal
         setModalShowResultado(false);
         respuestaIncorrecta();
+        setGanador("");
     }
 
     const reiniciar = () =>{
@@ -171,6 +181,7 @@ function JuegoReact(){
         setPistaArray(pistaAux);
         setPistaArrayPlayer2(pistaAux2);
         habilitarBotones();
+        setGanador("");
     }
 
     const respuestaCorrecta = () =>{
@@ -196,20 +207,22 @@ function JuegoReact(){
     
     
     return(
-        <>
-        <h1>JuegoReact</h1>
+        <div className='juego-main'>
+        <h1 className='titulo'>Slime Race</h1>
         <h3>Turno del {turno}</h3>
         <PistaCarrera pista={pistaArray}></PistaCarrera>
         <PistaCarrera pista={pistaArrayPlayer2}></PistaCarrera>
-        <button disabled={disabledBtnDado} onClick={tirarDado}>tirar dado</button>
-        <div>DADO: {valorDado}</div>
+        
+        {/* <div>DADO: {valorDado}</div> */}
+        <Imagen imagen={valorDado}/>
+        <button className='boton-juego' disabled={disabledBtnDado} onClick={tirarDado}>tirar dado</button>
         {/* <div>POSICION: {contadorPasos}</div> */}
-        <button disabled={disabledBtnAvanzar} onClick={interactuar}>avanzar</button>
-        <button onClick={reiniciar}>Reiniciar</button>
+        <button className='boton-juego' disabled={disabledBtnAvanzar} onClick={interactuar}>avanzar</button>
+        <button className='boton-juego' onClick={reiniciar}>Reiniciar</button>
         <VentanaModalPregunta show={modalShow} onHide={funcionAlCerrarLaVentanaModal} pregunta={pregunta} verdadera={verdadera} falsa={falsa} 
         orden={orden} dado={valorDado} turno={turno} correcta={respuestaCorrecta} incorrecta={respuestaIncorrecta}/>
         <VentanaModalResultado show={modalShowResultado} onHide={funcionAlCerrarLaVentanaModal} ganador={ganador}/>
-        </>
+        </div>
         
     );
 }

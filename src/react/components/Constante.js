@@ -1,6 +1,11 @@
-const PISTA = ["box-llena" ,"box-vacia", "box-vacia", 
+export const PISTA = ["box-llena" ,"box-vacia", "box-vacia", 
                 "box-vacia", "box-vacia", "box-vacia",
                 "box-vacia", "box-vacia", "box-vacia",
                 "box-vacia", "box-vacia", "box-vacia",
                 "box-vacia", "box-vacia", "box-meta"];
-export default PISTA;
+
+export const PISTA2 = ["box-llena" ,"box-vacia", "box-vacia", 
+                "box-vacia", "box-vacia", "box-vacia",
+                "box-vacia", "box-vacia", "box-vacia",
+                "box-vacia", "box-vacia", "box-vacia",
+                "box-vacia", "box-vacia", "box-meta"];
