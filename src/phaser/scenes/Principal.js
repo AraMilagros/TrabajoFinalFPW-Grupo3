@@ -23,8 +23,8 @@ export default class Principal extends Phaser.Scene {
     init(){ //con esto el cronometro ya se reinicia
         //objeto para el cronometro
         this.tiempo = {
-            minutos: '01',
-            segundos: '20'
+            minutos: '00',
+            segundos: '30'
         }        
     }
 

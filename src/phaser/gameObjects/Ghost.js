@@ -71,7 +71,7 @@ export default class Ghost extends Phaser.GameObjects.Sprite {
         }*/
     }
 
-    efect(ghosts,player){ //aca lo qeu ahce es que si el player choca con los fantasmas se vuelve al principio
+    efect(ghosts,player){ //aca lo que hace es que si el player choca con los fantasmas se vuelve al principio
         player.y = 2720;
         player.x= 450;
     }
