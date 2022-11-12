@@ -17,7 +17,7 @@
     }
     ,
     {
-        "pregunta":"¿Con cuál comando de HTTP se Solicita el recurso correspondiente al servidor sin modificar su estado?",
+        "pregunta":"¿Con cuál comando de HTTP que solicita el recurso correspondiente al servidor sin modificar su estado?",
         "respuestaCorrecta":"GET",
         "respuestaIncorrecta":"PUT"
     }
