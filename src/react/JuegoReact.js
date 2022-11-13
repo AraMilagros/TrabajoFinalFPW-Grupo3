@@ -166,7 +166,11 @@ function JuegoReact(){
         setFalsa(preguntas[indice].respuestaIncorrecta);
         setVerdadera(preguntas[indice].respuestaCorrecta);
     }
-
+    const cerrarVentanaModalResultado = () =>{
+        setModalShow(false);// oculta la ventana modal
+        setModalShowResultado(false);
+        setGanador("");
+    }
     const funcionAlCerrarLaVentanaModal = () =>{
         setModalShow(false);// oculta la ventana modal
         setModalShowResultado(false);
@@ -256,7 +260,7 @@ function JuegoReact(){
             </div>
             <VentanaModalPregunta show={modalShow} onHide={funcionAlCerrarLaVentanaModal} pregunta={pregunta} verdadera={verdadera} falsa={falsa}
                 orden={orden} dado={valorDado} turno={turno} correcta={respuestaCorrecta} incorrecta={respuestaIncorrecta} />
-            <VentanaModalResultado show={modalShowResultado} onHide={funcionAlCerrarLaVentanaModal} ganador={ganador} />
+            <VentanaModalResultado show={modalShowResultado} onHide={cerrarVentanaModalResultado} ganador={ganador} />
             <VentanaModalCambioTurno show={modalShowCambio} onHide={cerrarVentanaModalCambio} turno={turno} />
         </div>
         
