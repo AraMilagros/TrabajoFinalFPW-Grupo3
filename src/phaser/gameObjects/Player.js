@@ -7,20 +7,20 @@ export default class Player extends Phaser.GameObjects.Sprite{
     }
 
     create(solidos){
-        this.player = this.scenePadre.physics.add.sprite(520, 2720, 'dude').setScale(1.5);
-        this.player.setBounce(0.2);
+        this.player = this.scenePadre.physics.add.sprite(470, 2720, 'player').setScale(0.09);
+        this.player.setBounce(0.1);
         
         //animaciones
         this.scenePadre.anims.create({
             key: 'left',
-            frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
+            frames: this.anims.generateFrameNumbers('player', { start: 11, end: 8 }),
             frameRate: 10,
             repeat: -1
         });
         //Se repite lo mismo que en left
         this.scenePadre.anims.create({
             key: 'right',
-            frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
+            frames: this.anims.generateFrameNumbers('player', { start: 4, end: 7 }),
             frameRate: 10,
             repeat: -1
         });
@@ -28,10 +28,10 @@ export default class Player extends Phaser.GameObjects.Sprite{
         //Es el fotograma que muestra al player mirando hacia el frente
         this.scenePadre.anims.create({
             key: 'turn',
-            frames: [{ key: 'dude', frame: 4 }],
+            frames: [{ key: 'player', frame: 3 }],
             frameRate: 20
         });
-
+        this.audio = this.scenePadre.sound.add("jump", {loop : false});
         this.detectedCollider(solidos);     
     }
 
@@ -49,7 +49,9 @@ export default class Player extends Phaser.GameObjects.Sprite{
             this.player.anims.play('turn');
         }
         if (this.cursors.up.isDown && this.player.body.onFloor()) { //con "body.onFloor()" controla que no salte 2 veces
-            this.player.setVelocityY(-430);
+            this.player.setVelocityY(-400);
+             this.audio.play();
+             this.audio.volume= 0.15;
            // this.checkJump();//Es evitar que pueda saltar en el aire
         }
     }

@@ -6,19 +6,32 @@ export default class Preload extends Phaser.Scene {
 
     preload(){
         this.load.tilemapTiledJSON('mapa', 'img/phaser/mapa/mapa.json');
-        this.load.spritesheet('dude',
-            'img/phaser/dude.png',
-            { frameWidth: 32, frameHeight: 48 }
+        this.load.spritesheet('player',
+            'img/phaser/player2.png',
+            { frameWidth: 460, frameHeight: 593 }
         );
         this.load.image('tiles', 'img/phaser/mapa/tileSets.png');
 
         this.load.image('plataformaRoja', 'img/phaser/plataformaRoja.png');
         this.load.image('trophy', 'img/phaser/trophy.png');
+        this.load.image('ghost', 'img/phaser/ghost.png');
+
+        this.load.image('Menu','img/phaser/menuGame.png'); //se carga la imagen de menu
+        this.load.image('G.O','img/phaser/gameover.png'); //se carga la imagen de game over
+
+        this.load.audio('jump','img/phaser/jump.mp3');
+        this.load.audio('fondo','img/phaser/Fondo.mp3');
+        this.load.audio('trophy','img/phaser/mario-coin.mp3');
+        this.load.audio('victory','img/phaser/VictoryGame.mp3');
+        this.load.audio('GameOver','img/phaser/gameOver.mp3');
+        this.load.audio('menMusic','img/phaser/menuMusic.mp3');
+        
+        
     }
 
     //Una vez que se haya precargado lo necesario
     //  se llamara a la clase principal, donde la escena del juego terminara de crearse
     create(){
-        this.scene.start('Principal');
+        this.scene.start('Menu');
     }
 }
