@@ -12,13 +12,17 @@ export default class Preload extends Phaser.Scene {
             { frameWidth: 460, frameHeight: 593 }
         );
         this.load.image('tiles', 'img/phaser/mapa/tileSets.png');
+        this.load.image('tiles2', 'img/phaser/mapa/tileSets2.png');
 
         this.load.image('plataformaRoja', 'img/phaser/plataformaRoja.png');
+        this.load.image('plataformaMorada', 'img/phaser/plataforma2.png');
+
         this.load.image('trophy', 'img/phaser/trophy.png');
         this.load.image('ghost', 'img/phaser/ghost.png');
 
         this.load.image('Menu','img/phaser/menuGame.png'); //se carga la imagen de menu
         this.load.image('G.O','img/phaser/gameover.png'); //se carga la imagen de game over
+        this.load.image('SeleccionNivel','img/phaser/seleccioneunnivel.png')
 
         this.load.audio('jump','img/phaser/jump.mp3');
         this.load.audio('fondo','img/phaser/Fondo.mp3');
