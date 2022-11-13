@@ -5,7 +5,7 @@ import Config from './phaser/Config';
 
 function App() {
     return (
-        <div className='container'>
+        <div >
             <Header />
         </div>
     );
