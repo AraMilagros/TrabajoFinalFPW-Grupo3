@@ -5,6 +5,8 @@ import Phaser from 'phaser';
 import Menu from './scenes/Menu';
 import GameOver from './scenes/GameOver'
 import Win from './scenes/Win';
+import Niveles from './scenes/Niveles'
+import Level2 from './scenes/Level2';
 import '../assets/css/botonJugarJump.css'
 
 function Config() {
@@ -29,7 +31,7 @@ function Config() {
                     debug: false
                 }
             },
-            scene:[Preload, Menu, Principal, GameOver, Win]
+            scene:[Preload, Menu,Niveles,Principal,Level2,GameOver, Win]
         };
 
         var game = new Phaser.Game(config);

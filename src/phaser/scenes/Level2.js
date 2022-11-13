@@ -25,8 +25,8 @@ export default class Level2 extends Phaser.Scene {
     init(){ //con esto el cronometro ya se reinicia
         //objeto para el cronometro
         this.tiempo = {
-            minutos: '03',
-            segundos: '00'
+            minutos: '02',
+            segundos: '59'
         }        
     } 
 

@@ -6,6 +6,7 @@ export default class Preload extends Phaser.Scene {
 
     preload(){
         this.load.setBaseURL('http://localhost:3000');
+        this.load.tilemapTiledJSON('mapa2', 'img/phaser/mapa/mapa.json');
         this.load.tilemapTiledJSON('mapa', 'img/phaser/mapa/mapa.json');
         this.load.spritesheet('player',
             'img/phaser/player2.png',
@@ -19,6 +20,7 @@ export default class Preload extends Phaser.Scene {
 
         this.load.image('trophy', 'img/phaser/trophy.png');
         this.load.image('ghost', 'img/phaser/ghost.png');
+        this.load.image('ghost2', 'img/phaser/ghost2.png');
 
         this.load.image('Menu','img/phaser/menuGame.png'); //se carga la imagen de menu
         this.load.image('G.O','img/phaser/gameover.png'); //se carga la imagen de game over

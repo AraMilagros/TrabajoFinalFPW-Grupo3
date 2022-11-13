@@ -15,6 +15,7 @@ export default class Principal extends Phaser.Scene {
     trophies = null;
     ghosts = null;
     fondo =  null;
+    nivelActual = 1;
 
     constructor() {
         super({ key: 'Principal' });
@@ -50,11 +51,11 @@ export default class Principal extends Phaser.Scene {
         this.platformRoja = new plataformaMovible(this);//Se instancia la clase PlataformaMovible, pasandole esta escena que es donde se creara
         //Pasa la mismo que en Player, se llama el metodo para crear la plataform y ser visualizado
         // y se pasa el player para añadirle un collider y poder detectar sus colisiones
-        this.platformRoja.create(this.player.returnPlayer());
+        this.platformRoja.create(this.player.returnPlayer(),this.nivelActual);
         //se crea el trofeo para que pueda ser visualizado y se le pasa de parametro el player para añadirle un collider y poder detectar sus colisiones
         this.trophies.create(this.player.returnPlayer());
         this.ghosts = new Ghost(this);
-        this.ghosts.create(this.solidos, this.player.returnPlayer());
+        this.ghosts.create(this.solidos, this.player.returnPlayer(),this.nivelActual);
         
         this.sound.stopAll();
         
@@ -89,7 +90,7 @@ export default class Principal extends Phaser.Scene {
         this.cronometro.y = this.scoreText.y + 40;
 
         if(this.trophies.checkWin()){//regresa un true si es que todos los trofeos ya fueron recogidos
-            this.scene.start('Win');//y en caso de haberlo hecho, se llamara a la escena de ganador
+            this.scene.start('Level2');//y en caso de haberlo hecho, se llamara a la escena de ganador
         }
 
     }
