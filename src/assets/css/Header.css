@@ -2,27 +2,55 @@
     font-family: 'Press Start 2P';
     font-size: 13px;
 }
-
-nav {
+:root{
+    --color1:#400907;
+    --color2:#593907;
+    --color-primario:#2088d8;
+    --color-gris:#e4d3ed;
+    --color-blanco:#f8efed;
+}
+html, body{
+    height:100%;
+    background-color: #18171c;
+    background: url('../img/BgMain.jpg')  no-repeat center center fixed;
+    background-size: cover;
+    /* #0a0a0a */
+}
+.nav-home{
     /* border: 1px solid black; */
     /* para aumentar tamaño verticalment */
+    /* lo comento por ahora :v*/
     height: 4.5rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     /* para separar un poco el nav del contenido principal  */
-    margin: 10px 0 25px 0;
+    margin: 0 0 20px 0;
+    padding: 35px 0 35px 0;
+    /* background-color: hsl(0, 0%, 4%,40%); */
+    background: linear-gradient(0deg, hsl(0, 0%, 4%,60%),hsl(0, 0%, 4%,90%));
+    box-shadow: 0px 3px 10px black
+                ,inset 0px -15px 10px hsl(0, 0%, 6%,40%);
 }
-
+.titulo-home{
+    color: #f5f5f5;
+    text-align: center;
+    font-size: 40px;
+}
 .nav-link {
-    color: #030303;
+    color: #f5f5f5;
+    font-size: 20px;
     text-decoration: none;
     transition: .5s;
 }
+/* .nav-link:hover{
+    
+} */
 
 .nav-link:hover {
     /* Necesario para que aparezca la linea abajo de cada item en el menu */
-    background:linear-gradient(rgb(7, 7, 7), rgb(30, 70, 110), rgb(156, 205, 255));
+    color: #e44bfb;
+    background:linear-gradient(rgb(7, 7, 7), rgb(110, 30, 98), rgb(156, 205, 255));
     background-size: 100% 3px;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;

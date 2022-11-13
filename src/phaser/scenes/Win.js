@@ -9,6 +9,7 @@ export default class Win extends Phaser.Scene{
     }
 
     preload(){
+        this.load.setBaseURL('http://localhost:3000');
         this.load.image('Wingame','img/phaser/winGame.png'); //se carga la imagen de WinGame
         this.play.preload();//se llama al preload del play
     }

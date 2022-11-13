@@ -9,7 +9,7 @@ export default class Menu extends Phaser.Scene{
     }
 
     preload(){
-
+        this.load.setBaseURL('http://localhost:3000');
         this.play.preload();
     }
  

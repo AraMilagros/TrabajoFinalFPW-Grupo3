@@ -1,0 +1,78 @@
+.titulo-ppt {
+    text-align: center;
+    color: var(--color-blanco);
+  }
+
+  
+  .main-cvc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    column-gap: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .main-cvc > .section-cvc {
+    border: 1px solid var(--color-blanco);
+    padding: 30px;
+    width: 262px;
+    height: 340px;
+  }
+  
+  .jugador,
+  .jugador2 {
+    font-size: 30px;
+    font-weight: bolder;
+    color: var(--color-blanco);
+  }
+  
+  .opcion {
+    display: flex;
+    height: 20px; 
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  }
+
+  .opciones{
+    display: flex;
+    height: 20px; 
+    margin: auto;
+    justify-content:space-around;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .marcador2 {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    font-size: 20px;
+    font-weight: bolder;
+    margin: auto;
+  }
+.marcador2 > p{
+  color: var(--color-blanco);
+}
+  .opciones-jugadores{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .opc-jug1, .opc-jug2{
+    display: flex;
+  }
+
+  .btn-reinicio{
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .img-ppt{
+    filter: invert(.9);
+  }

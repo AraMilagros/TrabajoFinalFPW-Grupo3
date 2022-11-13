@@ -9,6 +9,7 @@ export class ButtonRestart {
     preload() {
         //Se carga el siguiente sprite 
         //es un sprite del reintentar que simula estando y no presionado
+        // this.load.setBaseURL('http://localhost:3000');
         this.relatedScene.load.spritesheet('buttonRes',
             'img/phaser/buttonRestart.png',
             { frameWidth: 350, frameHeight: 140 }

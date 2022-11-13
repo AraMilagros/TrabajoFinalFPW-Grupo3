@@ -9,6 +9,7 @@ export class ButtonLost {
     preload() {
         //Se carga el siguiente sprite 
         //es un sprite del mismo button1 que simula estando y no presionado
+        // this.load.setBaseURL('http://localhost:3000');
         this.relatedScene.load.spritesheet('buttonLost',
             'img/phaser/buttonmenu.png',
             { frameWidth: 240, frameHeight: 120 }

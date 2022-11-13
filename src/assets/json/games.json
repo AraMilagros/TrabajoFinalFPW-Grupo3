@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "title": "Jumpect",
+        "descripcion": "Juego de Plataformas hecho en Phaser.",
+        "url": "/juegos/Jumpect"
+    },
+
+    {
+        "id": 2,
+        "title": "Slime Race",
+        "descripcion": "Juego de preguntas",
+        "url": "/juegos/SlimeRace"
+    },
+    {
+        "id": 3,
+        "title": "Arkanoid",
+        "descripcion": "...",
+        "url": "/juegos/Arkanoid"
+    },
+    {
+        "id": 4,
+        "title": "Dude",
+        "descripcion": "...",
+        "url": "/juegos/Dude"
+    },
+    {
+        "id": 5,
+        "title": "Ahorcadito",
+        "descripcion": "...",
+        "url": "/juegos/Ahorcadito"
+    },
+    {
+        "id": 6,
+        "title": "Piedra, Papel o Tijeras",
+        "descripcion": "...",
+        "url": "/juegos/ppt"
+    }
+   
+    
+]
