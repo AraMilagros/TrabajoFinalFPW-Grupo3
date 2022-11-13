@@ -1,0 +1,44 @@
+.contenedor-home{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+}
+
+.titulo-home h3{
+    text-align: center;
+}
+
+.juegos{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+.titulo-phaser, .titulo-reacthome{
+    text-align: center;
+}
+
+.descripcion{
+    margin-top: 28px;
+    color: white;
+}
+
+h4{
+    margin-bottom: 40px;
+}
+
+.img-home{
+    width: 100%;
+    height: 15rem;
+}
+.descripcion p{
+    width: 300px;
+    margin: auto;
+    text-align: justify;
+}
+
+.juegos a{
+    margin: 15px;
+}
