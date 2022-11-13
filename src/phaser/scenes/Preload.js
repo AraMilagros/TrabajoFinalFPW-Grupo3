@@ -5,6 +5,7 @@ export default class Preload extends Phaser.Scene {
     }
 
     preload(){
+        this.load.setBaseURL('http://localhost:3000');
         this.load.tilemapTiledJSON('mapa', 'img/phaser/mapa/mapa.json');
         this.load.spritesheet('player',
             'img/phaser/player2.png',

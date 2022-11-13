@@ -1,0 +1,23 @@
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.boton-reinicio{
+    margin-top: 25px;
+    align-self: center;
+    width: 200px;
+    font-size: 20px;
+    border: 2px solid #435dcf;
+    background-color: #435dcf;
+    color: rgb(208, 227, 249);
+    padding: 7px;
+    border-radius: 10px;
+}
+.boton-reinicio:hover{
+
+    background-color: #4156b3;
+
+}
+.palabra-oculta{
+    color: #f5f5f5;
+}

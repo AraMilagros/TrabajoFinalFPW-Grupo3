@@ -1,0 +1,62 @@
+.card-game{
+    /* border: black 4px solid; */
+    /* width: 24vw; */
+    height: 50vh;
+    backdrop-filter: blur(4px);
+    padding: 0;
+    transition: 0.2s;
+    margin: auto;
+    border-radius: 30px;
+    box-shadow: none;
+    box-shadow: -2px 2px 1px rgba(247, 161, 250, 0.2),
+                2px -2px 1px hsla(0, 0%, 0%, 0.2);
+}
+.card-game:hover{
+
+    backdrop-filter: blur(15px);
+    padding: 15px;
+    box-shadow: 2px 2px 10px hsl(0, 0%, 100%,90%);
+                
+}
+.card-game-link{
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-game-img-top{
+    padding: 10px;
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.card-game-body{
+    padding-top: 20px;
+    height: 50%;
+    width: 100%;
+}
+.card-game-title{
+    text-align: center;
+    font-size: 25px;
+    color: #f5f5f5;
+}
+.card-game-text{
+    text-align: center;
+    font-size: 14px;
+    width:100%;
+    height: auto;
+    margin-top: 10px;
+    border-top: #f5f5f5 2px solid ;
+    padding-top: 10px;
+    color: #c9c9c9;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card-game-text:hover{
+    overflow: visible;
+
+}

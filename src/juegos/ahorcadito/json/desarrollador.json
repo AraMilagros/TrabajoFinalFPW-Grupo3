@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "title": "Alex Colpari",
+        "edad": "20 años",
+        "interes": "Videojuegos, Musica y Filosofia",
+        "presentation": "Hola, me llamo Alex, me gusta jugar Videojuegos y enfocarme en conocer aspectos nuevos sobre la vida.",
+        "url": "https://github.com/AlexUwU"
+    },
+
+    {
+        "id": 2,
+        "title": "Lucas Alberto Rafael Martinez LLosco",
+        "edad": "20 años",
+        "interes": "El basquet y el gym y los juegos de aventuras-accion",
+        "presentation": "'Me gusta el basquet y el gym, un tipo normal en la vida.'",
+        "url": "https://github.com/LucasGGz"
+    },
+    {
+        "id": 3,
+        "title": "Jose luis Marquez",
+        "edad": "21 años",
+        "interes": "Me gusta jugar al ajedrez en mi tiempo libre",
+        "presentation": "Quisiera aprender mas",
+        "url": "https://github.com/Tetricslaughter"
+    },
+    {
+        "id": 4,
+        "title": "Araceli Palenque",
+        "edad": "26 años",
+        "interes": "Libros y música en general",
+        "presentation": "Estudiante de primer año de la Tecnicatura universitaria de diseño integral de videojuegos",
+        "url": "https://github.com/AraMilagros"
+    },
+    {
+        "id": 5,
+        "title": "Rafael Ismael Pérez Fascio",
+        "edad": "23 años",
+        "interes": "Jugar videoJuegos, al fútbol, practicar kick boxing y la tecnología en general",
+        "presentation": "Estudiante de primer año de la Tecnicatura universitaria de diseño integral de videojuegos",
+        "url": "https://github.com/RafaelFascio"
+    },
+    {
+        "id": 6,
+        "title": "Ariel Reyes",
+        "edad": "20 años",
+        "interes": "Jugar videoJuegos, tocar el piano y aprender cosas nuevas",
+        "presentation": "Estudiante de primer año de la Tecnicatura universitaria de diseño integral de videojuegos",
+        "url": "https://github.com/Areyss"
+    }
+   
+    
+]
