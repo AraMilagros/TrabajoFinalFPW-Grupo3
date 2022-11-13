@@ -16,9 +16,8 @@ export default class Principal extends Phaser.Scene {
     ghosts = null;
     fondo =  null;
 
-    constructor(config) {
+    constructor() {
         super({ key: 'Principal' });
-        this.config = config;
     }
 
     init(){ //con esto el cronometro ya se reinicia
