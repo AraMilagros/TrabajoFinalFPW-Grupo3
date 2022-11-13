@@ -23,7 +23,7 @@ export default function Home() {
                                 El jugador debera saltar hasta la meta acumulando puntajes antes de que el tiempo se termine
                             </p>
                         </div>
-                        <a href="juegos/Jumpect" className="btn btn-dark">Jugar ahora</a>
+                        <a href="juegos/Jumpect" className="btn btn-dark p-3">Jugar ahora</a>
                     </div>
 
                     <div className="titulo-reacthome">
@@ -35,7 +35,7 @@ export default function Home() {
                                 Juego de dos jugadores, donde cada uno responderá preguntas para poder alcanzar la meta
                             </p>
                         </div>
-                        <a href="juegos/SlimeRace" className="btn btn-dark">Jugar ahora</a>
+                        <a href="juegos/SlimeRace" className="btn btn-dark p-3">Jugar ahora</a>
                     </div>
                 </div>
             </div>
