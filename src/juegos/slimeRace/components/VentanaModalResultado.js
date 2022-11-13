@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
+//ventana modal que muestra al jugador que ganó
 export default function VentanaModalResultado(props) {
     return (
       <Modal

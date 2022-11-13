@@ -1,5 +1,6 @@
 import Modal from 'react-bootstrap/Modal';
 
+//ventana modal que avisa que el jugador se equivocó y que se cambia el turno
 export default function VentanaModalCambioTurno(props) {
     return (
       <Modal

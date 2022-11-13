@@ -1,14 +1,11 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import '../assets/css/ventanaModal.css';
-//let resp = false;
+
+//Ventana Modal que Muestra una pregunta y sus respuestas recibidas como props
 export default function VentanaModalPregunta(props) {
-  // const validar = (props)=>{
-  //   resp = props;
-  //   console.log(props);
-  // }
   const {incorrecta,correcta,...other}=props
-  if (props.orden === 1) {
+  if (props.orden === 1) {          //dependiendo del valor de orden se devuelve una ventana modal diferente con el orden de las preguntas cambiados
     console.log(props.orden);
     return (
       <Modal
