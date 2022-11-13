@@ -239,7 +239,7 @@ function JuegoReact(){
     
     return(
         <div className='juego-main'>
-            <h1 className='titulo'>Slime Race</h1>
+            <h1 className='titulo-juego'>Slime Race</h1>
 
             <div className='tablero'>
                 <h3>Turno del {turno}</h3>
