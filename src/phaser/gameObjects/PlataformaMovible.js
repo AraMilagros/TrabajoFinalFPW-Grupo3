@@ -5,23 +5,39 @@ export default class plataformaMovible extends Phaser.GameObjects.Sprite{
         this.scenePadre = scene;
     }
 
-    create(player){
+    create(player,level){
         //este array contendra todas las plataformas que se crearan en la escena
         this.plataformasArray = new Array();
-  
-        //Se craeran 5 plataformas con diferentes posiciones a lo largo del mapa
-        // Para luego ser agregados al array, anteriormente creado
-        this.platformRoja = this.scenePadre.physics.add.image(400, 1980, 'plataformaRoja').setImmovable();
-        this.plataformasArray.push(this.platformRoja);//Se agrega al array
-        this.platformRoja = this.scenePadre.physics.add.image(200, 1600, 'plataformaRoja').setImmovable();
-        this.plataformasArray.push(this.platformRoja);
-        this.platformRoja = this.scenePadre.physics.add.image(200, 1200, 'plataformaRoja').setImmovable();
-        this.plataformasArray.push(this.platformRoja);
-        this.platformRoja = this.scenePadre.physics.add.image(400, 600, 'plataformaRoja').setImmovable();
-        this.plataformasArray.push(this.platformRoja);
-        this.platformRoja = this.scenePadre.physics.add.image(600, 420, 'plataformaRoja').setImmovable();
-        this.plataformasArray.push(this.platformRoja);
-             
+        switch(level){
+            case 1://nivel 1
+            //Se craeran 5 plataformas con diferentes posiciones a lo largo del mapa
+            // Para luego ser agregados al array, anteriormente creado
+            this.platformRoja = this.scenePadre.physics.add.image(400, 1980, 'plataformaRoja').setImmovable();
+            this.plataformasArray.push(this.platformRoja);//Se agrega al array
+            this.platformRoja = this.scenePadre.physics.add.image(200, 1600, 'plataformaRoja').setImmovable();
+            this.plataformasArray.push(this.platformRoja);
+            this.platformRoja = this.scenePadre.physics.add.image(200, 1200, 'plataformaRoja').setImmovable();
+            this.plataformasArray.push(this.platformRoja);
+            this.platformRoja = this.scenePadre.physics.add.image(400, 600, 'plataformaRoja').setImmovable();
+            this.plataformasArray.push(this.platformRoja);
+            this.platformRoja = this.scenePadre.physics.add.image(600, 420, 'plataformaRoja').setImmovable();
+            this.plataformasArray.push(this.platformRoja);
+            break;
+            case 2://nivel 2
+                        //Se craeran 5 plataformas con diferentes posiciones a lo largo del mapa
+            // Para luego ser agregados al array, anteriormente creado
+            this.platformRoja = this.scenePadre.physics.add.image(400, 1980, 'plataformaMorada').setImmovable();
+            this.plataformasArray.push(this.platformRoja);//Se agrega al array
+            this.platformRoja = this.scenePadre.physics.add.image(200, 1600, 'plataformaMorada').setImmovable();
+            this.plataformasArray.push(this.platformRoja);
+            this.platformRoja = this.scenePadre.physics.add.image(200, 1200, 'plataformaMorada').setImmovable();
+            this.plataformasArray.push(this.platformRoja);
+            this.platformRoja = this.scenePadre.physics.add.image(400, 600, 'plataformaMorada').setImmovable();
+            this.plataformasArray.push(this.platformRoja);
+            this.platformRoja = this.scenePadre.physics.add.image(600, 420, 'plataformaMorada').setImmovable();
+            this.plataformasArray.push(this.platformRoja);
+            break;
+        }
         //Una vez creado y agregado al array, se lo recorrera para modificar algunos comportamientos
         // se deshabilitara la gravedad y añadira un collider
         this.plataformasArray.forEach((elem) =>{
@@ -30,6 +46,7 @@ export default class plataformaMovible extends Phaser.GameObjects.Sprite{
             this.detectedCollision(elem, player);
         })
     }
+
 
     move(){
        //Aqui se vuelve a recorrer el array para verificar sus posiciones
