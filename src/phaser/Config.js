@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Principal from './scenes/Principal';
 import Preload from './scenes/Preload';
 import Phaser from 'phaser';
+import Menu from './scenes/Menu';
+import GameOver from './scenes/GameOver'
+import Win from './scenes/Win';
 
 
 function Config() {
@@ -12,19 +15,21 @@ function Config() {
         var config = {
             type: Phaser.AUTO,
             autoCenter:Phaser.Scale.CENTER_HORIZONTALLY,
-            width: window.innerWidth-416,
+
+            //width: window.innerWidth-90,
+            //width: window.innerWidth-416,
             // height: window.innerHeight,
-            // width: 900,
+            width: 1005,
             height: 650,
             autoResize: true,
             physics: {
                 default: 'arcade',
                 arcade: {
                     gravity: { y: 400 },
-                    debug: true
+                    debug: false
                 }
             },
-            scene:[Preload, Principal]
+            scene:[Preload, Menu, Principal, GameOver, Win]
         };
 
         var game = new Phaser.Game(config);
