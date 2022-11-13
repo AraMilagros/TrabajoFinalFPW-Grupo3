@@ -60,7 +60,7 @@ export default class Principal extends Phaser.Scene {
         this.sound.stopAll();
         
         this.fondo=this.sound.add('fondo')
-        this.fondo.play({loop:true,volume:0.1,seek:2});
+        this.fondo.play({loop:true,volume:0.06,seek:2});
 
         this.cronometro = this.add.text(0, 0, 'Tiempo: '+this.tiempo.minutos+':'+this.tiempo.segundos, { fontSize: '32px', fill: '#000' });
         //Este evento llamara a la funcion Cronometro() por cada segundo
