@@ -5,13 +5,13 @@ import Phaser from 'phaser';
 import Menu from './scenes/Menu';
 import GameOver from './scenes/GameOver'
 import Win from './scenes/Win';
-
+import '../assets/css/botonJugarJump.css'
 
 function Config() {
     const [listo, setListo] = useState(true);
 
-    useEffect(() => {
-
+    const jugar = () => {
+        setListo(false);
         var config = {
             type: Phaser.AUTO,
             autoCenter:Phaser.Scale.CENTER_HORIZONTALLY,
@@ -38,7 +38,15 @@ function Config() {
             setListo(false);
             game.destroy(true);
         }
-    }, [listo]);
+    }
+    if(listo){
+        return(
+            <main className="mainJuego"> 
+                <button className="boton-jugar-juego" onClick={jugar}>Iniciar Juego</button>
+            </main>
+            
+        );      
+    }
 }    
 
 export default Config;

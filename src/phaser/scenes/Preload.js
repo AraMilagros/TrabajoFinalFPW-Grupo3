@@ -25,7 +25,7 @@ export default class Preload extends Phaser.Scene {
         this.load.audio('trophy','img/phaser/mario-coin.mp3');
         this.load.audio('victory','img/phaser/VictoryGame.mp3');
         this.load.audio('GameOver','img/phaser/gameOver.mp3');
-        this.load.audio('menMusic','img/phaser/menuMusic.mp3');
+        this.load.audio('menMusic','img/phaser/MusicMenuJump.mp3');
         
         
     }
