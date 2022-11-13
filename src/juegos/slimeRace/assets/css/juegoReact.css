@@ -10,14 +10,13 @@
     --color-gris:#e4d3ed;
     --color-blanco:#f8efed;
 } */
+/*se pasó a otro archivo estas variables*/
 
 .juego-main{
     height: 100%;
     background-color: rgba(108, 18, 12, 0.896);
     background-image: url('../img/backgroud.jpg');
     background-size: cover;
-    /* background-image: url('../img/piso.jpg'); */
-    /* background-size: cover; */
 }
 .titulo-juego{
     font-family: Fredoka One, serif;
@@ -25,7 +24,6 @@
     text-align: center;
     text-shadow: -4px 4px 0px var(--color1), 1px -1px 0px #000000;
     color: var(--color-blanco);
-    /* color: rgb(220, 220, 220); */
 }
 .tablero{
     display: flex;
@@ -50,7 +48,6 @@
 }
 
 .conteiner-interactivo{
-    /* border: 5px solid black; */
     display: flex;
     justify-content: space-around;
     padding: 20px;
