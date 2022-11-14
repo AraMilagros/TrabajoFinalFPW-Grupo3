@@ -10,10 +10,10 @@ export default class Menu extends Phaser.Scene{
         this.restart= new ButtonRestart(this);
     }
 
-    preload(){
-        this.play.preload();
-        this.restart.preload(); //se llama al preload del restart
-    }
+    // preload(){
+    //     this.play.preload();
+    //     this.restart.preload(); //se llama al preload del restart
+    // }
  
     create(){
         this.game.config.backgroundColor.setTo(0, 0, 0);
