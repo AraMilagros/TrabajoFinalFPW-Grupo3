@@ -6,15 +6,15 @@ export class ButtonLevel2 {
     }
 
 
-    preload() {
-        //Se carga el siguiente sprite 
-        //es un sprite del mismo button1 que simula estando y no presionado
-        this.relatedScene.load.spritesheet('level2',
-            'img/phaser/N2button.png',
-            { frameWidth: 240, frameHeight: 140 }
-        );
+    // preload() {
+    //     //Se carga el siguiente sprite 
+    //     //es un sprite del mismo button1 que simula estando y no presionado
+    //     this.relatedScene.load.spritesheet('level2',
+    //         'img/phaser/N2button.png',
+    //         { frameWidth: 240, frameHeight: 140 }
+    //     );
 
-    }
+    // }
 
     create() {
         //Se agrega el sprite en la escena

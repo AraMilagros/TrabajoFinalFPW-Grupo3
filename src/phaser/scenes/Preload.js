@@ -33,6 +33,15 @@ export default class Preload extends Phaser.Scene {
         this.load.audio('GameOver','img/phaser/gameOver.mp3');
         this.load.audio('menMusic','img/phaser/MusicMenuJump.mp3');
         
+        this.load.spritesheet('level1',
+            'img/phaser/N1button.png',
+            { frameWidth: 240, frameHeight: 120 }
+        );
+
+        this.load.spritesheet('level2',
+        'img/phaser/N2button.png',
+        { frameWidth: 240, frameHeight: 140 }
+    );
         
     }
 

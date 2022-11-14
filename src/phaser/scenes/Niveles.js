@@ -13,11 +13,11 @@ export default class Menu extends Phaser.Scene{
 
     }
 
-    preload(){
+    // preload(){
 
-        this.level1.preload();
-        this.level2.preload();
-    }
+    //     // this.level1.preload();
+    //     // this.level2.preload();
+    // }
  
     create(){
         this.game.config.backgroundColor.setTo(0, 0, 0);
