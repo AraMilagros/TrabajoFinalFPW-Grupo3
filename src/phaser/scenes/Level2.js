@@ -26,7 +26,7 @@ export default class Level2 extends Phaser.Scene {
         //objeto para el cronometro
         this.tiempo = {
             minutos: '02',
-            segundos: '59'
+            segundos: '02'
         }        
     } 
 
@@ -110,7 +110,12 @@ export default class Level2 extends Phaser.Scene {
             if (this.tiempo.segundos == 0) {//en caso de que ya los segundos lleguen a 0, se pasa a mermar los minutos y regresar a 59, los segundos
                 this.tiempo.segundos = '59',
                     this.tiempo.minutos--;
-                this.tiempo.minutos = (this.tiempo.minutos == 0) ? this.tiempo.minutos : '00';
+                // this.tiempo.minutos = (this.tiempo.minutos == 0) ? this.tiempo.minutos : '00';
+                if(this.tiempo.minutos == 0){
+                    this.tiempo.minutos = '00';
+                }else{
+                    this.tiempo.minutos = '01';
+                }
             }
             //se va modificando el texto para poder ser visualizado en pantalla
             this.cronometro.setText('Tiempo: '+this.tiempo.minutos+':'+this.tiempo.segundos);
