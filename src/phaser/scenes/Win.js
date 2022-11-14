@@ -8,11 +8,11 @@ export default class Win extends Phaser.Scene{
         this.play = new ButtonLost(this);
     }
 
-    preload(){
-        this.load.setBaseURL('http://localhost:3000');
-        this.load.image('Wingame','img/phaser/winGame.png'); //se carga la imagen de WinGame
-        this.play.preload();//se llama al preload del play
-    }
+    // preload(){
+    //     this.load.setBaseURL('http://localhost:3000');
+    //     
+    //     this.play.preload();//se llama al preload del play
+    // }
  
     create(){
         this.game.config.backgroundColor.setTo(0, 0, 0);
